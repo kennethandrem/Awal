@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "253139312684",
+    "firebase_url": "https://crop-health-2ba52.firebaseio.com",
+    "project_id": "crop-health-2ba52",
+    "storage_bucket": "crop-health-2ba52.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:253139312684:android:af6cce287dbebefc",
+        "android_client_info": {
+          "package_name": "com.kennek.crophealth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "253139312684-q3id15q2bsqjp4ldti7dauguhsf2a23q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIJZqYFDugqUp37cXuzKgfdNZMZNqqbTM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:253139312684:android:60a1c0a20670539a",
+        "android_client_info": {
+          "package_name": "com.kennek.awal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "253139312684-q3id15q2bsqjp4ldti7dauguhsf2a23q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIJZqYFDugqUp37cXuzKgfdNZMZNqqbTM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
