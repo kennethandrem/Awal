@@ -8,4 +8,9 @@
     <color name="secondary_text">#757575</color>
     <color name="icons">#212121</color>
     <color name="divider">#BDBDBD</color>
+    <color name="facebook">#8b9dc3</color>
+    <color name="facebook_dark">#3b5998</color>
+    <color name="facebook_light">#dfe3ee</color>
+
+
 </resources>
