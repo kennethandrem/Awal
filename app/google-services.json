@@ -1,58 +1,35 @@
 {
   "project_info": {
-    "project_number": "253139312684",
-    "firebase_url": "https://crop-health-2ba52.firebaseio.com",
-    "project_id": "crop-health-2ba52",
-    "storage_bucket": "crop-health-2ba52.appspot.com"
+    "project_number": "6866847285",
+    "firebase_url": "https://awal-b82e4.firebaseio.com",
+    "project_id": "awal-b82e4",
+    "storage_bucket": "awal-b82e4.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:253139312684:android:af6cce287dbebefc",
-        "android_client_info": {
-          "package_name": "com.kennek.crophealth"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "253139312684-q3id15q2bsqjp4ldti7dauguhsf2a23q.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCIJZqYFDugqUp37cXuzKgfdNZMZNqqbTM"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:253139312684:android:60a1c0a20670539a",
+        "mobilesdk_app_id": "1:6866847285:android:60a1c0a20670539a",
         "android_client_info": {
           "package_name": "com.kennek.awal"
         }
       },
       "oauth_client": [
         {
-          "client_id": "253139312684-q3id15q2bsqjp4ldti7dauguhsf2a23q.apps.googleusercontent.com",
+          "client_id": "6866847285-1ipqkokkpqcbgsjhhnoic7v1j2fj1gpv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kennek.awal",
+            "certificate_hash": "8D746086DB2BD0344ED51FC7FE3BADF1A86A5145"
+          }
+        },
+        {
+          "client_id": "6866847285-cdnbepuivapit2s0j6ha2i42o9kkbr2o.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCIJZqYFDugqUp37cXuzKgfdNZMZNqqbTM"
+          "current_key": "AIzaSyCO1xKIbk4Wzv4E2bZ9GIJgWUrzmGcqRcQ"
         }
       ],
       "services": {
@@ -60,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "6866847285-cdnbepuivapit2s0j6ha2i42o9kkbr2o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

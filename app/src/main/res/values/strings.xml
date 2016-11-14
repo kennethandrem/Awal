@@ -4,8 +4,8 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_settings">Settings</string>
-    <string name="facebook_app_id">1152549698114871</string>
+    <string name="action_settings">Logout</string>
+    <string name="facebook_app_id">1945238049037083</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
@@ -19,4 +19,7 @@
     <string name="notyet">No account yet? Create one</string>
     <string name="createaccount">Create account</string>
     <string name="ihave">Already a member? Login</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
