@@ -55,7 +55,7 @@ public class Main extends AppCompatActivity
         startActivity(intent);
     }
 
-    public void logout(View view) {
+    public void logout() {
         LoginManager.getInstance().logOut();
         goLoginScreen();
     }
@@ -85,7 +85,7 @@ public class Main extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            logout();
         }
 
         return super.onOptionsItemSelected(item);
