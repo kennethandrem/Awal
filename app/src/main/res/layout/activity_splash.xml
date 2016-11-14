@@ -16,7 +16,7 @@
         android:orientation="vertical"
         android:gravity="center">
 
-        <ImageView android:src="@drawable/ic_menu_slideshow"
+        <ImageView android:src="@drawable/ic_nature_people_black_48dp"
             android:layout_width="192dp"
             android:layout_height="192dp"
             android:layout_gravity="center_horizontal" />

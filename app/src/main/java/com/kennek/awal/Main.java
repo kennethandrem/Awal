@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -28,7 +30,9 @@ import static android.R.attr.name;
 import static com.kennek.awal.R.string.email;
 
 public class Main extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements Buscados.OnFragmentInteractionListener,Herbicidas.OnFragmentInteractionListener,
+        Fungicidas.OnFragmentInteractionListener,NavigationView.OnNavigationItemSelectedListener,
+        Insecticidas.OnFragmentInteractionListener,Correctores.OnFragmentInteractionListener{
 
     private TextView nameTextView;
     private TextView emailTextView;
@@ -51,7 +55,7 @@ public class Main extends AppCompatActivity
         if (user != null) {
             String name = user.getDisplayName();
             String email = user.getEmail();
-            Toast.makeText(getApplicationContext(), "Bienvenido " + user.getDisplayName(), Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Bienvenido a Awal, " + user.getDisplayName(), Toast.LENGTH_LONG).show();
         } else {
             goLoginScreen();
         }
@@ -59,7 +63,7 @@ public class Main extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, user.getDisplayName() + ", la busqueda estará disponible en la siguiente versión", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -72,6 +76,58 @@ public class Main extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        if (navigationView != null) {
+            prepararDrawer(navigationView);
+            // Seleccionar item por defecto
+            seleccionarItem(navigationView.getMenu().getItem(0));
+        }
+
+    }
+    private void prepararDrawer(NavigationView navigationView) {
+        navigationView.setNavigationItemSelectedListener(
+                new NavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(MenuItem menuItem) {
+                        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+                        menuItem.setChecked(true);
+                        seleccionarItem(menuItem);
+                        drawer.closeDrawers();
+                        return true;
+                    }
+                });
+
+    }
+
+    private void seleccionarItem(MenuItem itemDrawer) {
+        Fragment fragmentoGenerico = null;
+        FragmentManager fragmentManager = getSupportFragmentManager();
+
+        switch (itemDrawer.getItemId()) {
+            case R.id.nav_camera:
+                fragmentoGenerico = new Buscados();
+                break;
+            case R.id.nav_gallery:
+                fragmentoGenerico = new Herbicidas(); // Fragmento para la sección Cuenta
+                break;
+            case R.id.nav_slideshow:
+                fragmentoGenerico = new Fungicidas(); // Fragmento para la sección Cuenta
+                break;
+            case R.id.nav_manage:
+                fragmentoGenerico = new Insecticidas();
+                break;
+            case R.id.nav_man:
+                fragmentoGenerico = new Correctores();
+                break;
+        }
+        if (fragmentoGenerico != null) {
+            fragmentManager
+                    .beginTransaction()
+                    .replace(R.id.content_main, fragmentoGenerico)
+                    .commit();
+        }
+
+        // Setear título actual
+        setTitle(itemDrawer.getTitle());
     }
     private void goLoginScreen() {
         Intent intent = new Intent(this, SignIn.class);
@@ -130,14 +186,15 @@ public class Main extends AppCompatActivity
 
         } else if (id == R.id.nav_manage) {
 
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
     }
 }

@@ -4,8 +4,6 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,12 +12,12 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link Buscados.OnFragmentInteractionListener} interface
+ * {@link Herbicidas.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link Buscados#newInstance} factory method to
+ * Use the {@link Herbicidas#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Buscados extends Fragment {
+public class Herbicidas extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -31,7 +29,7 @@ public class Buscados extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public Buscados() {
+    public Herbicidas() {
         // Required empty public constructor
     }
 
@@ -41,11 +39,11 @@ public class Buscados extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment Buscados.
+     * @return A new instance of fragment Herbicidas.
      */
     // TODO: Rename and change types and number of parameters
-    public static Buscados newInstance(String param1, String param2) {
-        Buscados fragment = new Buscados();
+    public static Herbicidas newInstance(String param1, String param2) {
+        Herbicidas fragment = new Herbicidas();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -62,23 +60,11 @@ public class Buscados extends Fragment {
         }
     }
 
-    private RecyclerView reciclador;
-    private LinearLayoutManager layoutManager;
-    private AdaptadorMaizFertilizante adaptador;
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_buscados, container, false);
-
-        reciclador = (RecyclerView) view.findViewById(R.id.reciclador);
-        layoutManager = new LinearLayoutManager(getActivity());
-        reciclador.setLayoutManager(layoutManager);
-
-        adaptador = new AdaptadorMaizFertilizante();
-        reciclador.setAdapter(adaptador);
-        return view;
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_herbicidas, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -105,6 +91,16 @@ public class Buscados extends Fragment {
         mListener = null;
     }
 
+    /**
+     * This interface must be implemented by activities that contain this
+     * fragment to allow an interaction in this fragment to be communicated
+     * to the activity and potentially other fragments contained in that
+     * activity.
+     * <p>
+     * See the Android Training lesson <a href=
+     * "http://developer.android.com/training/basics/fragments/communicating.html"
+     * >Communicating with Other Fragments</a> for more information.
+     */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
