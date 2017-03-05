@@ -30,7 +30,7 @@ import static android.R.attr.name;
 import static com.kennek.awal.R.string.email;
 
 public class Main extends AppCompatActivity
-        implements Buscados.OnFragmentInteractionListener,Herbicidas.OnFragmentInteractionListener,
+        implements Agrocentro.OnFragmentInteractionListener, Buscados.OnFragmentInteractionListener,Herbicidas.OnFragmentInteractionListener,
         Fungicidas.OnFragmentInteractionListener,NavigationView.OnNavigationItemSelectedListener,
         Insecticidas.OnFragmentInteractionListener,Correctores.OnFragmentInteractionListener{
 
@@ -80,6 +80,7 @@ public class Main extends AppCompatActivity
             prepararDrawer(navigationView);
             // Seleccionar item por defecto
             seleccionarItem(navigationView.getMenu().getItem(0));
+            setTitle("Awal");
         }
 
     }
@@ -103,20 +104,34 @@ public class Main extends AppCompatActivity
         FragmentManager fragmentManager = getSupportFragmentManager();
 
         switch (itemDrawer.getItemId()) {
+            case R.id.nav_agracentro:
+                fragmentoGenerico = new Agrocentro();
+                setTitle("Empresas Asociadas");
+                break;
             case R.id.nav_camera:
                 fragmentoGenerico = new Buscados();
+                // Setear título actual
+                setTitle(itemDrawer.getTitle());
                 break;
             case R.id.nav_gallery:
-                fragmentoGenerico = new Herbicidas(); // Fragmento para la sección Cuenta
+                fragmentoGenerico = new Herbicidas();
+                // Setear título actual
+                setTitle(itemDrawer.getTitle());
                 break;
             case R.id.nav_slideshow:
                 fragmentoGenerico = new Fungicidas(); // Fragmento para la sección Cuenta
+                // Setear título actual
+                setTitle(itemDrawer.getTitle());
                 break;
             case R.id.nav_manage:
                 fragmentoGenerico = new Insecticidas();
+                // Setear título actual
+                setTitle(itemDrawer.getTitle());
                 break;
             case R.id.nav_man:
                 fragmentoGenerico = new Correctores();
+                // Setear título actual
+                setTitle(itemDrawer.getTitle());
                 break;
         }
         if (fragmentoGenerico != null) {
@@ -125,9 +140,6 @@ public class Main extends AppCompatActivity
                     .replace(R.id.content_main, fragmentoGenerico)
                     .commit();
         }
-
-        // Setear título actual
-        setTitle(itemDrawer.getTitle());
     }
     private void goLoginScreen() {
         Intent intent = new Intent(this, SignIn.class);

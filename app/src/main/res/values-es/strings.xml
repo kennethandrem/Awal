@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Awal</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Cerrar sesión</string>
+    <string name="facebook_app_id">1945238049037083</string>
+    <string name="username">Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="login">Iniciar sesión</string>
+    <string name="User">Usuario</string>
+    <string name="passwordAgain">Contraseña</string>
+    <string name="email">Correo electrónico</string>
+    <string name="signUp">Registrate</string>
+    <string name="pleaseWait">Por favor espera</string>
+    <string name="logout">Cerrar sesión</string>
+    <string name="carnet">Usuario</string>
+    <string name="notyet">¿Aún no tienes cuenta? Crear una</string>
+    <string name="createaccount">Crear cuenta</string>
+    <string name="ihave">¿Ya eres miembro? Inicia sesión</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hola</string>
+</resources>

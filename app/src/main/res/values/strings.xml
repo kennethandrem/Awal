@@ -15,7 +15,7 @@
     <string name="signUp">Sign Up</string>
     <string name="pleaseWait">Pleas Wait</string>
     <string name="logout">Logout</string>
-    <string name="carnet">Student ID</string>
+    <string name="carnet">Id</string>
     <string name="notyet">No account yet? Create one</string>
     <string name="createaccount">Create account</string>
     <string name="ihave">Already a member? Login</string>
