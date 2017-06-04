@@ -1,14 +1,13 @@
 package com.kennek.awal;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -25,9 +24,8 @@ import com.facebook.AccessToken;
 import com.facebook.login.LoginManager;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-
-import static android.R.attr.name;
-import static com.kennek.awal.R.string.email;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class Main extends AppCompatActivity
         implements Agrocentro.OnFragmentInteractionListener, Buscados.OnFragmentInteractionListener,Herbicidas.OnFragmentInteractionListener,
@@ -37,13 +35,13 @@ public class Main extends AppCompatActivity
     private TextView nameTextView;
     private TextView emailTextView;
     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
         if (AccessToken.getCurrentAccessToken() == null) {
             goLoginScreen();
         }
