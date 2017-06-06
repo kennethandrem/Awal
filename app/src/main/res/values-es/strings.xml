@@ -6,7 +6,6 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Cerrar sesión</string>
-    <string name="facebook_app_id">1945238049037083</string>
     <string name="username">Usuario</string>
     <string name="password">Contraseña</string>
     <string name="login">Iniciar sesión</string>
@@ -20,7 +19,10 @@
     <string name="notyet">¿Aún no tienes cuenta? Crear una</string>
     <string name="createaccount">Crear cuenta</string>
     <string name="ihave">¿Ya eres miembro? Inicia sesión</string>
-
+    <string name="sign_in_cancelled">Se ha cancelado el inicio de sesion.</string>
+    <string name="no_internet_connection">No posee conexión a internet</string>
+    <string name="unknown_error">Error desconocido</string>
+    <string name="unknown_sign_in_response">Respuesta desconocida</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hola</string>
 </resources>

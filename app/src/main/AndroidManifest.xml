@@ -9,7 +9,6 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
         <activity
             android:name=".Splash"
             android:label="@string/app_name"
@@ -23,15 +22,6 @@
         <activity
             android:name=".Main"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".SignIn"
-            android:theme="@style/SplashTheme" />
-        <activity android:name=".SignUp"></activity>
-        <activity android:name="com.facebook.FacebookActivity"
-            android:configChanges=
-                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"
-            android:label="@string/app_name" />
     </application>
 
 </manifest>
