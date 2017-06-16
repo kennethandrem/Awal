@@ -11,6 +11,7 @@
     <color name="facebook">#8b9dc3</color>
     <color name="facebook_dark">#3b5998</color>
     <color name="facebook_light">#dfe3ee</color>
+    <color name="card_press">#f8f8f8</color>
 
 
 </resources>

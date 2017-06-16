@@ -40,7 +40,7 @@ public class Splash extends AppCompatActivity {
                                     .setProviders(Arrays.asList(
                                             new AuthUI.IdpConfig.Builder(AuthUI.EMAIL_PROVIDER).build(),
                                             new AuthUI.IdpConfig.Builder(AuthUI.FACEBOOK_PROVIDER).build()))
-                                    .setIsSmartLockEnabled(true)
+                                    .setIsSmartLockEnabled(false)
                                     .setTheme(R.style.SplashTheme)
                                     .setLogo(R.drawable.ic_nature_people_black_48dp)
                                     .build(),

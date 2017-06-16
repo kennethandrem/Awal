@@ -4,9 +4,17 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.ArrayList;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
 
 
 /**
@@ -23,7 +31,10 @@ public class Herbicidas extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
+    ArrayList<HerbicidasData> arrayHerbicidasData = new ArrayList<>();
+
+    RecyclerView recyclerHerbicidas;
+
     private String mParam1;
     private String mParam2;
 
@@ -58,13 +69,28 @@ public class Herbicidas extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        HerbicidasData herbicidasData1 = new HerbicidasData();
+        HerbicidasData herbicidasData2 = new HerbicidasData();
+
+        herbicidasData1.setHeader("Halcón 50 WG");
+        herbicidasData1.setDetail("Muestra absorción gradual en las hojas. Es sistémico vía xilema, siendo transportado acropetalmente y de forma translaminar dentro de las hojas. Debido a este particular modo de acción debe ser aplicado de manera preventiva.");
+
+        arrayHerbicidasData.add(herbicidasData1);
+
+        herbicidasData2.setHeader("asdfasd 50 WG");
+        herbicidasData2.setDetail("Muestra absorción gradual en las hojas. Es sistémico vía xilema, siendo transportado acropetalmente y de forma translaminar dentro de las hojas. Debido a este particular modo de acción debe ser aplicado de manera preventiva.");
+
+        arrayHerbicidasData.add(herbicidasData2);
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_herbicidas, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_herbicidas, container, false);
+        recyclerHerbicidas = (RecyclerView)rootView.findViewById(R.id.recyclerHerbicidas);
+        showReciclerView();
+        return rootView;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -91,6 +117,17 @@ public class Herbicidas extends Fragment {
         mListener = null;
     }
 
+    public void showReciclerView(){
+        RecyclerView.LayoutManager layoutManager;
+        HerbicidasAdapterRecyclerCards herbicidasAdapterRecyclerCards;
+        recyclerHerbicidas.setHasFixedSize(true);
+        //Cambiar dependiendo de la manera que quiera mostrar las cards
+        //layoutManager = new GridLayoutManager(this.getActivity(), 2);
+        layoutManager = new LinearLayoutManager(this.getActivity());
+        recyclerHerbicidas.setLayoutManager(layoutManager);
+        herbicidasAdapterRecyclerCards = new HerbicidasAdapterRecyclerCards(arrayHerbicidasData, this.getActivity());
+        recyclerHerbicidas.setAdapter(herbicidasAdapterRecyclerCards);
+    }
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated
