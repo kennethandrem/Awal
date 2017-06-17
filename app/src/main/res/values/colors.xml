@@ -2,7 +2,7 @@
 <resources>
     <color name="primary">#8BC34A</color>
     <color name="primary_dark">#689F38</color>
-    <color name="primary_light">#DCEDC8</color>
+    <color name="primary_light">#aed581</color>
     <color name="accent">#795548</color>
     <color name="primary_text">#212121</color>
     <color name="secondary_text">#757575</color>
@@ -11,6 +11,7 @@
     <color name="facebook">#8b9dc3</color>
     <color name="facebook_dark">#3b5998</color>
     <color name="facebook_light">#dfe3ee</color>
+    <color name="card_press">#f8f8f8</color>
 
 
 </resources>

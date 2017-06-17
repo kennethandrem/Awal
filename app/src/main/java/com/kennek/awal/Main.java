@@ -1,13 +1,13 @@
 package com.kennek.awal;
 
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -20,12 +20,19 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.facebook.AccessToken;
 import com.facebook.login.LoginManager;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.kennek.awal.Fragments.Agrocentro;
+import com.kennek.awal.Fragments.Correctores;
+import com.kennek.awal.Fragments.Fungicidas;
+import com.kennek.awal.Fragments.Herbicidas;
+import com.kennek.awal.Fragments.Insecticidas;
+
+import static com.kennek.awal.R.color.primary;
+import static com.kennek.awal.R.color.primary_dark;
 
 public class Main extends AppCompatActivity
         implements Agrocentro.OnFragmentInteractionListener, Buscados.OnFragmentInteractionListener,Herbicidas.OnFragmentInteractionListener,
@@ -35,6 +42,9 @@ public class Main extends AppCompatActivity
     private TextView nameTextView;
     private TextView emailTextView;
     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference("message");
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,27 +52,26 @@ public class Main extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        if (AccessToken.getCurrentAccessToken() == null) {
-            goLoginScreen();
-        }
-
+        myRef.setValue("Hello, World!");
         nameTextView = (TextView) findViewById(R.id.NombreUser);
         emailTextView = (TextView) findViewById(R.id.CorreoUser);
+
 
 
         if (user != null) {
             String name = user.getDisplayName();
             String email = user.getEmail();
             Toast.makeText(getApplicationContext(), "Bienvenido a Awal, " + user.getDisplayName(), Toast.LENGTH_LONG).show();
-        } else {
-            goLoginScreen();
         }
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, user.getDisplayName() + ", la busqueda estará disponible en la siguiente versión", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Snackbar snackbar = Snackbar.make(view, user.getDisplayName() + ", la busqueda estará disponible en la siguiente versión", Snackbar.LENGTH_LONG)
+                        .setAction("Aceptar", null);
+                View sbView = snackbar.getView();
+                sbView.setBackgroundColor(getResources().getColor(primary_dark));
+                snackbar.show();
             }
         });
 
@@ -76,13 +85,15 @@ public class Main extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         if (navigationView != null) {
             prepararDrawer(navigationView);
-            // Seleccionar item por defecto
-            seleccionarItem(navigationView.getMenu().getItem(0));
             setTitle("Awal");
         }
-
+        MenuItem item = navigationView.getMenu().findItem(R.id.nav_agracentro);
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.content_main, Agrocentro.newInstance());
+        transaction.commit();
     }
     private void prepararDrawer(NavigationView navigationView) {
+
         navigationView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
@@ -140,7 +151,7 @@ public class Main extends AppCompatActivity
         }
     }
     private void goLoginScreen() {
-        Intent intent = new Intent(this, SignIn.class);
+        Intent intent = new Intent(this, Splash.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }

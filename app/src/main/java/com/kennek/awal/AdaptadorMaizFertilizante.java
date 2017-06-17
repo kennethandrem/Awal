@@ -11,8 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.kennek.awal.R;
-import com.kennek.awal.Fertilizante;
+import com.kennek.awal.Fragments.Fertilizante;
 
 /**
  * Adaptador para mostrar las comidas más pedidas en la sección "Inicio"

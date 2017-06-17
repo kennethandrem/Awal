@@ -15,4 +15,6 @@
     <dimen name="altura_miniatura_comida">50dp</dimen>
 
     <dimen name="ancho_logo">20dp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
 </resources>

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.kennek.awal">
+
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".AwalApp"
         android:allowBackup="true"
@@ -9,7 +11,6 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
         <activity
             android:name=".Splash"
             android:label="@string/app_name"
@@ -24,14 +25,9 @@
             android:name=".Main"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".SignIn"
-            android:theme="@style/SplashTheme" />
-        <activity android:name=".SignUp"></activity>
-        <activity android:name="com.facebook.FacebookActivity"
-            android:configChanges=
-                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"
-            android:label="@string/app_name" />
+            android:name=".Herbicidas.HerbicidaDetail"
+            android:label="@string/title_activity_herbicida_detail"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
