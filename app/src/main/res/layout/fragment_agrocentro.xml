@@ -2,8 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary_dark"
-    tools:context="com.kennek.awal.Agrocentro">
+    android:background="@color/primary_light"
+    tools:context="com.kennek.awal.Fragments.Agrocentro">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

@@ -1,4 +1,4 @@
-package com.kennek.awal;
+package com.kennek.awal.Herbicidas;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;

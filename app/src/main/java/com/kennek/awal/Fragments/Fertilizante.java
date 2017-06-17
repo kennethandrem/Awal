@@ -1,4 +1,6 @@
-package com.kennek.awal;
+package com.kennek.awal.Fragments;
+
+import com.kennek.awal.R;
 
 import java.util.ArrayList;
 import java.util.List;

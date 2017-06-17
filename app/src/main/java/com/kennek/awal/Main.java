@@ -1,7 +1,6 @@
 package com.kennek.awal;
 
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -21,12 +20,19 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.facebook.AccessToken;
 import com.facebook.login.LoginManager;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.kennek.awal.Fragments.Agrocentro;
+import com.kennek.awal.Fragments.Correctores;
+import com.kennek.awal.Fragments.Fungicidas;
+import com.kennek.awal.Fragments.Herbicidas;
+import com.kennek.awal.Fragments.Insecticidas;
+
+import static com.kennek.awal.R.color.primary;
+import static com.kennek.awal.R.color.primary_dark;
 
 public class Main extends AppCompatActivity
         implements Agrocentro.OnFragmentInteractionListener, Buscados.OnFragmentInteractionListener,Herbicidas.OnFragmentInteractionListener,
@@ -61,8 +67,11 @@ public class Main extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, user.getDisplayName() + ", la busqueda estará disponible en la siguiente versión", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Snackbar snackbar = Snackbar.make(view, user.getDisplayName() + ", la busqueda estará disponible en la siguiente versión", Snackbar.LENGTH_LONG)
+                        .setAction("Aceptar", null);
+                View sbView = snackbar.getView();
+                sbView.setBackgroundColor(getResources().getColor(primary_dark));
+                snackbar.show();
             }
         });
 

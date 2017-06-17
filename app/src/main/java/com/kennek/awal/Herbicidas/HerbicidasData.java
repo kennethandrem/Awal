@@ -1,4 +1,4 @@
-package com.kennek.awal;
+package com.kennek.awal.Herbicidas;
 
 /**
  * Created by kenne on 6/15/2017.
