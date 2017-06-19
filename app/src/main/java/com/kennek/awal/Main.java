@@ -115,7 +115,7 @@ public class Main extends AppCompatActivity
         switch (itemDrawer.getItemId()) {
             case R.id.nav_agracentro:
                 fragmentoGenerico = new Agrocentro();
-                setTitle("Empresas Asociadas");
+                setTitle(itemDrawer.getTitle());
                 break;
             case R.id.nav_camera:
                 fragmentoGenerico = new Fertilizantes();

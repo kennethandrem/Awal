@@ -5,10 +5,46 @@
     android:background="@color/primary_light"
     tools:context="com.kennek.awal.Fragments.Agrocentro">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view_quienesomos"
+        android:layout_gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="30dp"
+        android:elevation="5dp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/relativeCardquienessomos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/press_card">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lbTituloquienesomos"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="¿Quiénes somos?"
+                android:textColor="@color/primary_dark"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/textQuienesSomos"
+                android:layout_below="@+id/lbTituloquienesomos"
+                android:text="Agrocentro es una empresa familiar con más de 35 años en el mercado regional, la principal línea de negocios es la formulación y comercialización de productos para la protección de cultivos. Estamos presentes en más de 10 países: Guatemala, Belice, El Salvador, Honduras, Nicaragua, Panamá, República Dominicana, Surinam, México, Colombia y Ecuador. Oficinas centrales ubicadas en Ciudad de Guatemala y contamos con dos plantas de formulación, en Guatemala y Colombia.
+                \n\nAgrocentro ha experimentado un acelerado crecimiento y expansión en los últimos años, en parte por contar con una amplia red de proveedores a nivel mundial, con quienes establecemos alianzas estratégicas, logrando costos competitivos y un amplio portafolio de productos para ofrecer soluciones completas a los principales cultivos de la región.
+            \n\nSin duda alguna, otro pilar de nuestro crecimiento es nuestro recurso humano, el cual a través de su compromiso y entrega ha permitido superar las expectativas de nuestros clientes."/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
 
 </FrameLayout>
