@@ -3,9 +3,9 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    tools:context="com.kennek.awal.Buscados">
+    tools:context="com.kennek.awal.Fragments.Fertilizantes">
 
-    <TextView
+    <!-- <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,11 +15,15 @@
         android:padding="8dp"
         android:text="Lo más buscado"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="@color/cardview_light_background" />
+        android:textColor="@color/cardview_light_background" /> -->
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/reciclador"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbars="vertical" />
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerFertilizantes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
 </LinearLayout>

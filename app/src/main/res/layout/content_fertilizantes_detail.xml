@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.kennek.awal.Fertilizantes.FertilizantesDetail"
+    tools:showIn="@layout/activity_fertilizantes_detail">
+
+    <RelativeLayout
+        android:id="@+id/relativeCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/press_card">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lbConcentracionFertilizantes"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Concentración"
+            android:textColor="@color/primary_dark"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/textConcentracionFertilizantes"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/lbConcentracionFertilizantes"
+            android:text="Muestra absorción gradual en las hojas. Es sistémico vía xilema, siendo transportado acropetalmente y de forma translaminar dentro de las hojas. Debido a este particular modo de acción debe ser aplicado de manera preventiva."/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lbRecomendacionFertilizantes"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Recomendaciones"
+            android:layout_below="@+id/textConcentracionFertilizantes"
+            android:textColor="@color/primary_dark"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/textRecomendacionFertilizante"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/lbRecomendacionFertilizantes"
+            android:text="Muestra absorción gradual en las hojas. Es sistémico vía xilema, siendo transportado acropetalmente y de forma translaminar dentro de las hojas. Debido a este particular modo de acción debe ser aplicado de manera preventiva."/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lbBeneficioFertilizantes"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Beneficios"
+            android:layout_below="@+id/textRecomendacionFertilizante"
+            android:textColor="@color/primary_dark"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/textBeneficioFertilizantes"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/lbBeneficioFertilizantes"
+            android:text="Muestra absorción gradual en las hojas. Es sistémico vía xilema, siendo transportado acropetalmente y de forma translaminar dentro de las hojas. Debido a este particular modo de acción debe ser aplicado de manera preventiva."/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lbDosisFertilizantes"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Dosis"
+            android:layout_below="@+id/textBeneficioFertilizantes"
+            android:textColor="@color/primary_dark"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/textDosisFertilizantes"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/lbDosisFertilizantes"
+            android:text="Muestra absorción gradual en las hojas. Es sistémico vía xilema, siendo transportado acropetalmente y de forma translaminar dentro de las hojas. Debido a este particular modo de acción debe ser aplicado de manera preventiva."/>
+
+
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>

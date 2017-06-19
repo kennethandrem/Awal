@@ -26,16 +26,16 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.kennek.awal.Fragments.Agrocentro;
+import com.kennek.awal.Fragments.Fertilizantes;
 import com.kennek.awal.Fragments.Correctores;
 import com.kennek.awal.Fragments.Fungicidas;
 import com.kennek.awal.Fragments.Herbicidas;
 import com.kennek.awal.Fragments.Insecticidas;
 
-import static com.kennek.awal.R.color.primary;
 import static com.kennek.awal.R.color.primary_dark;
 
 public class Main extends AppCompatActivity
-        implements Agrocentro.OnFragmentInteractionListener, Buscados.OnFragmentInteractionListener,Herbicidas.OnFragmentInteractionListener,
+        implements Agrocentro.OnFragmentInteractionListener, Fertilizantes.OnFragmentInteractionListener,Herbicidas.OnFragmentInteractionListener,
         Fungicidas.OnFragmentInteractionListener,NavigationView.OnNavigationItemSelectedListener,
         Insecticidas.OnFragmentInteractionListener,Correctores.OnFragmentInteractionListener{
 
@@ -118,7 +118,7 @@ public class Main extends AppCompatActivity
                 setTitle("Empresas Asociadas");
                 break;
             case R.id.nav_camera:
-                fragmentoGenerico = new Buscados();
+                fragmentoGenerico = new Fertilizantes();
                 // Setear título actual
                 setTitle(itemDrawer.getTitle());
                 break;

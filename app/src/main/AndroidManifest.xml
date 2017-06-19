@@ -27,6 +27,14 @@
         <activity
             android:name=".Herbicidas.HerbicidaDetail"
             android:label="@string/title_activity_herbicida_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Correctores.CorrectoresDetail"
+            android:label="@string/title_activity_correctores_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Fertilizantes.FertilizantesDetail"
+            android:label="@string/title_activity_fertilizantes_detail"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

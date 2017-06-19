@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.kennek.awal.Correctores.CorrectoresDetail"
+    tools:showIn="@layout/activity_correctores_detail">
+
+    <RelativeLayout
+        android:id="@+id/relativeCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/press_card">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lbAccion"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Acción"
+            android:textColor="@color/primary_dark"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/textAccion"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/lbAccion"
+            android:text="Muestra absorción gradual en las hojas. Es sistémico vía xilema, siendo transportado acropetalmente y de forma translaminar dentro de las hojas. Debido a este particular modo de acción debe ser aplicado de manera preventiva."/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lbConcentracion"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Concentración"
+            android:layout_below="@+id/textAccion"
+            android:textColor="@color/primary_dark"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/textConcentracion"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/lbConcentracion"
+            android:text="Muestra absorción gradual en las hojas. Es sistémico vía xilema, siendo transportado acropetalmente y de forma translaminar dentro de las hojas. Debido a este particular modo de acción debe ser aplicado de manera preventiva."/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lbCultivo"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Cultivo"
+            android:layout_below="@+id/textConcentracion"
+            android:textColor="@color/primary_dark"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/textCultivo"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/lbCultivo"
+            android:text="Muestra absorción gradual en las hojas. Es sistémico vía xilema, siendo transportado acropetalmente y de forma translaminar dentro de las hojas. Debido a este particular modo de acción debe ser aplicado de manera preventiva."/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lbDosis"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Dosis"
+            android:layout_below="@+id/textCultivo"
+            android:textColor="@color/primary_dark"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/textDosis"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/lbDosis"
+            android:text="Muestra absorción gradual en las hojas. Es sistémico vía xilema, siendo transportado acropetalmente y de forma translaminar dentro de las hojas. Debido a este particular modo de acción debe ser aplicado de manera preventiva."/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lbIndicaciones"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Indicaciones"
+            android:layout_below="@+id/textDosis"
+            android:textColor="@color/primary_dark"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/textIndicaciones"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/lbIndicaciones"
+            android:text="Muestra absorción gradual en las hojas. Es sistémico vía xilema, siendo transportado acropetalmente y de forma translaminar dentro de las hojas. Debido a este particular modo de acción debe ser aplicado de manera preventiva."/>
+
+
+    </RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>
